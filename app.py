@@ -1,6 +1,4 @@
 from pydantic import BaseModel
-import os
-from dotenv import load_dotenv
 import requests
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse
@@ -12,9 +10,7 @@ import pytesseract
 import weaviate
 from weaviate.classes.init import Auth
 
-# Load API key
-load_dotenv()
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+OPENAI_API_KEY="eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6IjI0ZjIwMDQ5MjJAZHMuc3R1ZHkuaWl0bS5hYy5pbiJ9.CfwJHvL6a0adtb7_Xu9in2i4Kg7BLXJTP6h3Qr_96D4"
 WEAVIATE_URL = "zu1ijfg3rlyvlghm1kmzca.c0.asia-southeast1.gcp.weaviate.cloud"
 WEAVIATE_API_KEY = "TVVoZjVjc0NranZVeEV2VV9UOC9ieTlUbEsxZmhOQiszd0xHczJrVW4xdkYzR28xdllRWmpaN3VRVEt3PV92MjAw"
 

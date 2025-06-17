@@ -1,5 +1,12 @@
-openai
-qdrant-client
 fastapi
 uvicorn
+pydantic
+requests
+pillow
+pytesseract
+weaviate-client
 httpx
+openai
+tqdm
+python-dotenv
+gunicorn
