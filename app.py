@@ -9,6 +9,8 @@ import base64
 import pytesseract
 import weaviate
 from weaviate.classes.init import Auth
+from fastapi.responses import RedirectResponse
+
 
 OPENAI_API_KEY="eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6IjI0ZjIwMDQ5MjJAZHMuc3R1ZHkuaWl0bS5hYy5pbiJ9.CfwJHvL6a0adtb7_Xu9in2i4Kg7BLXJTP6h3Qr_96D4"
 WEAVIATE_URL = "zu1ijfg3rlyvlghm1kmzca.c0.asia-southeast1.gcp.weaviate.cloud"
@@ -23,6 +25,10 @@ collection = client.collections.get("TextEmbedding")
 
 # Setup FastAPI
 app = FastAPI()
+
+@app.get("/")
+def root():
+    return RedirectResponse(url="/docs")
 
 app.add_middleware(
     CORSMiddleware,
