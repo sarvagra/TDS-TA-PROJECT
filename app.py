@@ -28,7 +28,7 @@ app = FastAPI()
 
 @app.get("/")
 def root():
-    return RedirectResponse(url="/docs")
+    return RedirectResponse(url="/docs#/default/virtual_ta_virtual_ta_post")
 
 app.add_middleware(
     CORSMiddleware,
