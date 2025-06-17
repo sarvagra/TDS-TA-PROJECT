@@ -1,0 +1,5 @@
+openai
+qdrant-client
+fastapi
+uvicorn
+httpx
