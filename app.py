@@ -61,7 +61,7 @@ def get_embedding(text: str):
     return response.json()["data"][0]["embedding"]
 
 # Main endpoint
-@app.post("/virtual-ta")
+@app.post("/virtual_ta")
 def virtual_ta(question: Question):
     # Combine question + OCR text if available
     if question.question and question.image:
