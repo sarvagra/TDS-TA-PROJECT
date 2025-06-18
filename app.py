@@ -9,7 +9,7 @@ import base64
 import pytesseract
 import weaviate
 from weaviate.classes.init import Auth
-from fastapi.responses import RedirectResponse
+'''from fastapi.responses import RedirectResponse'''
 
 
 OPENAI_API_KEY="eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6IjI0ZjIwMDQ5MjJAZHMuc3R1ZHkuaWl0bS5hYy5pbiJ9.CfwJHvL6a0adtb7_Xu9in2i4Kg7BLXJTP6h3Qr_96D4"
@@ -26,9 +26,9 @@ collection = client.collections.get("TextEmbedding")
 # Setup FastAPI
 app = FastAPI()
 
-@app.get("/")
+'''@app.get("/")
 def root():
-    return RedirectResponse(url="/docs#/default/virtual_ta_virtual_ta_post")
+    return RedirectResponse(url="/docs#/default/virtual_ta_virtual_ta_post")'''
 
 app.add_middleware(
     CORSMiddleware,
